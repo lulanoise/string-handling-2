@@ -5,13 +5,11 @@ public class Start {
     public static void main(String[] args) {
         String string1 = "United Kingdom";
         String string2 = "Germany";
+        int index = string1.indexOf(' ');
+        String sub1 = string1.substring(0,index).toUpperCase();
+        String sub2 = string1.substring(index,14).toUpperCase();
 
-        String sub1 = string1.substring(0,6).toUpperCase();
-        String sub2 = string1.substring(7,14).toUpperCase();
-        String concatenatedString = sub1 + " " + string2 + " " + sub2;
-        concatenatedString = concatenatedString.toUpperCase();
-
-        char[] charArray = concatenatedString.toCharArray();
+        char[] charArray = (sub1 + " " + string2 + " " + sub2).toUpperCase().toCharArray();
 
         System.out.println(charArray);
     }
